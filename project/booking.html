@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>UPS B&B Services | Book Your Stay</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <a href="project.html" class="logo">
+                UPS <span>B&B</span>
+            </a>
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="project.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="gallery.html">
+                            Gallery
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html"
+                           class="active">
+                            Booking
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html"
+                           class="nav-book">
+                            Book Now
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= BOOKING HERO ================= -->
+
+    <section class="hero booking-hero">
+
+        <div class="hero-content">
+
+            <h1>
+                Book Your <span>Stay</span>
+            </h1>
+
+            <p>
+                🏡 Your comfortable stay starts here.
+            </p>
+
+            <p class="hero-description">
+
+                Fill in the form below and let us help
+                you arrange a comfortable and memorable stay
+                at UPS B&B Services.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BOOKING SECTION ================= -->
+
+    <section class="section booking-section">
+
+        <div class="container">
+
+
+            <div class="section-title">
+
+                <h2>
+                    Make a <span>Reservation</span>
+                </h2>
+
+                <p>
+                    Please provide the following information
+                    to request your booking.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= BOOKING FORM ================= -->
+
+            <div class="booking-container">
+                <form class="booking-form" id="bookingForm">
+
+
+
+                    <!-- FULL NAME -->
+
+                    <div class="form-group full-width">
+
+                        <label for="fullname">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- PHONE -->
+
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone / WhatsApp Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="e.g. 0117063669"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- ROOM TYPE -->
+
+                    <div class="form-group">
+
+                        <label for="room">
+                            Room Type
+                        </label>
+
+                       <select id="roomType" name="roomType" required>
+    <option value="">Select a room</option>
+    <option value="Single Room" data-price="1500">Single Room - KSh 1,500/night</option>
+    <option value="Bedsitter" data-price="2000">Bedsitter - KSh 2,000/night</option>
+    <option value="One Bedroom" data-price="3000">One Bedroom - KSh 3,000/night</option>
+    <option value="Two Bedroom" data-price="4500">Two Bedroom - KSh 4,500/night</option>
+    <option value="Deluxe" data-price="6000">Deluxe - KSh 6,000/night</option>
+</select>
+
+                    </div>
+
+
+
+                    <!-- NUMBER OF GUESTS -->
+
+                    <div class="form-group">
+
+                        <label for="guests">
+                            Number of Guests
+                        </label>
+
+                        <input
+                            type="number"
+                            id="guests"
+                            name="guests"
+                            min="1"
+                            max="20"
+                            placeholder="Number of guests"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CHECK-IN -->
+
+                    <div class="form-group">
+
+                        <label for="checkin">
+                            Check-in Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="checkin"
+                            name="checkin"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- CHECK-OUT -->
+
+                    <div class="form-group">
+
+                        <label for="checkout">
+                            Check-out Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="checkout"
+                            name="checkout"
+                            required
+                        >
+
+                    </div>
+
+
+
+                    <!-- SPECIAL REQUESTS -->
+
+                    <div class="form-group full-width">
+
+                        <label for="requests">
+                            Special Requests
+                        </label>
+                        <br>
+
+                        <textarea
+                            id="requests"
+                            name="requests"
+                            placeholder="Tell us anything you'd like us to know..."
+                        ></textarea>
+
+                    </div>
+                    <!-- AUTOMATIC PRICE CALCULATOR -->
+<div class="price-summary">
+    <h3>Booking Summary</h3>
+
+    <div class="price-row">
+        <span>Room:</span>
+        <strong id="summaryRoom">Not selected</strong>
+    </div>
+
+    <div class="price-row">
+        <span>Price per night:</span>
+        <strong id="summaryPrice">KSh 0</strong>
+    </div>
+
+    <div class="price-row">
+        <span>Number of nights:</span>
+        <strong id="summaryNights">0</strong>
+    </div>
+
+    <div class="price-total">
+        <span>Total Price:</span>
+        <strong id="totalPrice">KSh 0</strong>
+    </div>
+</div>
+<!-- ========================= -->
+<!-- OWNER BOOKING CONFIRMATION -->
+<!-- ========================= -->
+
+<div class="owner-confirmation">
+
+    <h3>Booking Confirmation</h3>
+
+    <p>
+        After checking room availability, choose an option below:
+    </p>
+
+    <div class="confirmation-buttons">
+
+        <button
+            type="button"
+            class="btn btn-available"
+            onclick="sendAvailableConfirmation()">
+            ✅ Room Available
+        </button>
+
+        <button
+            type="button"
+            class="btn btn-unavailable"
+            onclick="sendUnavailableConfirmation()">
+            ❌ Room Not Available
+        </button>
+
+    </div>
+
+</div>
+
+
+
+                    <!-- ================= TERMS ================= -->
+
+                    <div class="terms-box">
+
+                        <h3>
+                            📋 Terms & Conditions
+                        </h3>
+
+                        <p>
+                            By submitting this booking request,
+                            you confirm that the information you
+                            have provided is accurate.
+                        </p>
+
+                        <p>
+                            Booking requests are subject to room
+                            availability. Our team will contact you
+                            to confirm availability, pricing and
+                            booking details.
+                        </p>
+
+                        <label class="terms-check">
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                name="terms"
+                                required
+                            >
+
+                            <span>
+                                I have read and agree to the
+                                terms and conditions.
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- ================= SUBMIT ================= -->
+
+                    <div class="booking-submit">
+                        <button
+    type="submit"
+    class="btn btn-primary booking-submit">
+    🏠 Send Booking via WhatsApp
+</button>
+
+                       
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= BOOKING INFORMATION ================= -->
+
+    <section class="section section-light">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>
+                    Why Book With <span>Us?</span>
+                </h2>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🛏️
+                    </div>
+
+                    <h3>
+                        Comfortable Rooms
+                    </h3>
+
+                    <p>
+                        Relax in clean, comfortable and
+                        well-maintained accommodation.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🔐
+                    </div>
+
+                    <h3>
+                        Safe & Secure
+                    </h3>
+
+                    <p>
+                        Your comfort, privacy and security
+                        are important to us.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        Friendly Service
+                    </h3>
+
+                    <p>
+                        Our team is ready to assist you
+                        throughout your stay.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT CTA ================= -->
+
+    <section class="cta">
+
+        <div class="container">
+
+            <h2>
+                Have Questions Before Booking?
+            </h2>
+
+            <p>
+                Our team is ready to help you choose
+                the right accommodation.
+            </p>
+
+            <a
+                href="contact.html"
+                class="btn btn-primary"
+            >
+                📞 Contact Us
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+
+            <!-- ABOUT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    UPS B&B Services
+                </h3>
+
+                <p>
+                    Your home away from home. We are committed
+                    to providing comfortable, clean and memorable
+                    accommodation.
+                </p>
+
+            </div>
+
+
+
+            <!-- QUICK LINKS -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="project.html">
+                    Home
+                </a>
+
+                <a href="gallery.html">
+                    Gallery
+                </a>
+
+                <a href="booking.html">
+                    Booking
+                </a>
+
+                <a href="contact.html">
+                    Contact Us
+                </a>
+
+            </div>
+
+
+
+            <!-- CONTACT -->
+
+            <div class="footer-column">
+
+                <h3>
+                    Contact Us
+                </h3>
+
+                <p>
+                    📍 Kasarani, Nairobi
+                </p>
+
+                <p>
+                    📞 0117230647
+                </p>
+
+                <p>
+                    📱 0117063669
+                </p>
+
+                <p>
+                    📧 gichuhimwathijohn2007@gmail.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-bottom">
+
+            <p>
+                &copy; 2026 UPS B&B Services.
+                🏡 Your Comfort, Our Priority.
+            </p>
+
+        </div>
+
+    </footer>
+ <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const bookingForm = document.getElementById("bookingForm");
+
+    // =========================
+    // FORM FIELDS
+    // =========================
+
+    const fullName = document.getElementById("fullname");
+    const phone = document.getElementById("phone");
+    const email = document.getElementById("email");
+
+    const roomType = document.getElementById("roomType");
+    const guests = document.getElementById("guests");
+
+    const checkIn = document.getElementById("checkin");
+    const checkOut = document.getElementById("checkout");
+
+    const specialRequests =
+        document.getElementById("requests");
+
+
+    // =========================
+    // PRICE SUMMARY
+    // =========================
+
+    const summaryRoom =
+        document.getElementById("summaryRoom");
+
+    const summaryPrice =
+        document.getElementById("summaryPrice");
+
+    const summaryNights =
+        document.getElementById("summaryNights");
+
+    const totalPrice =
+        document.getElementById("totalPrice");
+
+
+    // =========================
+    // CALCULATE PRICE
+    // =========================
+
+    function calculatePrice() {
+
+        const selectedRoom =
+            roomType.options[roomType.selectedIndex];
+
+        if (!selectedRoom || !selectedRoom.value) {
+
+            summaryRoom.textContent = "Not selected";
+            summaryPrice.textContent = "KSh 0";
+            summaryNights.textContent = "0";
+            totalPrice.textContent = "KSh 0";
+
+            return;
+        }
+
+        const roomName = selectedRoom.value;
+
+        const pricePerNight =
+            Number(selectedRoom.dataset.price);
+
+        summaryRoom.textContent = roomName;
+
+        summaryPrice.textContent =
+            "KSh " + pricePerNight.toLocaleString();
+
+
+        if (!checkIn.value || !checkOut.value) {
+
+            summaryNights.textContent = "0";
+            totalPrice.textContent = "KSh 0";
+
+            return;
+        }
+
+
+        const startDate =
+            new Date(checkIn.value);
+
+        const endDate =
+            new Date(checkOut.value);
+
+        const difference =
+            endDate - startDate;
+
+        const nights =
+            difference / (1000 * 60 * 60 * 24);
+
+
+        if (nights <= 0) {
+
+            summaryNights.textContent =
+                "Invalid dates";
+
+            totalPrice.textContent =
+                "KSh 0";
+
+            return;
+        }
+
+
+        const total =
+            pricePerNight * nights;
+
+        summaryNights.textContent =
+            nights;
+
+        totalPrice.textContent =
+            "KSh " + total.toLocaleString();
+    }
+
+
+    // Update price automatically
+
+    roomType.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+    checkIn.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+    checkOut.addEventListener(
+        "change",
+        calculatePrice
+    );
+
+
+    // =========================
+    // CUSTOMER BOOKING REQUEST
+    // =========================
+
+    bookingForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            if (!roomType.value) {
+
+                alert("Please select a room.");
+
+                return;
+            }
+
+
+            if (!checkIn.value || !checkOut.value) {
+
+                alert(
+                    "Please select your check-in and check-out dates."
+                );
+
+                return;
+            }
+
+
+            const startDate =
+                new Date(checkIn.value);
+
+            const endDate =
+                new Date(checkOut.value);
+
+
+            if (endDate <= startDate) {
+
+                alert(
+                    "Check-out date must be after check-in date."
+                );
+
+                return;
+            }
+
+
+            const selectedRoom =
+                roomType.options[
+                    roomType.selectedIndex
+                ];
+
+            const roomName =
+                selectedRoom.value;
+
+            const pricePerNight =
+                Number(selectedRoom.dataset.price);
+
+
+            const difference =
+                endDate - startDate;
+
+            const nights =
+                difference /
+                (1000 * 60 * 60 * 24);
+
+
+            const total =
+                pricePerNight * nights;
+
+
+            // =========================
+            // OWNER WHATSAPP MESSAGE
+            // =========================
+
+            const message =
+`🏠 *UPS B&B SERVICES - BOOKING REQUEST*
+
+Hello UPS B&B Services,
+
+I would like to make a booking.
+
+👤 *GUEST DETAILS*
+
+Name: ${fullName.value}
+Phone: ${phone.value}
+Email: ${email.value}
+
+🏠 *BOOKING DETAILS*
+
+Room: ${roomName}
+Guests: ${guests.value}
+Check-in: ${checkIn.value}
+Check-out: ${checkOut.value}
+
+🌙 *STAY DETAILS*
+
+Number of nights: ${nights}
+
+💰 *PRICE DETAILS*
+
+Price per night: KSh ${pricePerNight.toLocaleString()}
+Total estimated price: KSh ${total.toLocaleString()}
+
+📝 *SPECIAL REQUESTS*
+
+${specialRequests.value || "None"}
+
+Please confirm room availability.
+
+Thank you.
+
+*UPS B&B Services*`;
+
+
+            // UPS B&B WhatsApp number
+
+            const whatsappNumber =
+                "254117063669";
+
+
+            const whatsappURL =
+                "https://wa.me/" +
+                whatsappNumber +
+                "?text=" +
+                encodeURIComponent(message);
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+    );
+
+});
+
+
+// ==================================================
+// SEND "ROOM AVAILABLE" MESSAGE TO CUSTOMER
+// ==================================================
+
+function sendAvailableConfirmation() {
+
+    const fullName =
+        document.getElementById("fullname");
+
+    const phone =
+        document.getElementById("phone");
+
+    const roomType =
+        document.getElementById("roomType");
+
+    const guests =
+        document.getElementById("guests");
+
+    const checkIn =
+        document.getElementById("checkin");
+
+    const checkOut =
+        document.getElementById("checkout");
+
+
+    // Check required information
+
+    if (
+        !fullName.value ||
+        !phone.value ||
+        !roomType.value ||
+        !checkIn.value ||
+        !checkOut.value
+    ) {
+
+        alert(
+            "Please make sure the customer's booking information is filled in."
+        );
+
+        return;
+    }
+
+
+    const selectedRoom =
+        roomType.options[
+            roomType.selectedIndex
+        ];
+
+    const roomName =
+        selectedRoom.value;
+
+    const pricePerNight =
+        Number(selectedRoom.dataset.price);
+
+
+    const startDate =
+        new Date(checkIn.value);
+
+    const endDate =
+        new Date(checkOut.value);
+
+
+    const nights =
+        (endDate - startDate) /
+        (1000 * 60 * 60 * 24);
+
+
+    if (nights <= 0) {
+
+        alert(
+            "Please check the booking dates."
+        );
+
+        return;
+    }
+
+
+    const total =
+        pricePerNight * nights;
+
+
+    // =========================
+    // CUSTOMER MESSAGE
+    // =========================
+
+    const message =
+`🏠 *UPS B&B SERVICES*
+
+Hello ${fullName.value},
+
+Good news! 🎉
+
+Your booking request has been received and the requested room is *AVAILABLE*.
+
+🏠 *BOOKING DETAILS*
+
+Room: ${roomName}
+Check-in: ${checkIn.value}
+Check-out: ${checkOut.value}
+Number of nights: ${nights}
+Guests: ${guests.value}
+
+💰 *PRICE DETAILS*
+
+Price per night: KSh ${pricePerNight.toLocaleString()}
+Total: KSh ${total.toLocaleString()}
+
+📍 Location: Kasarani, Nairobi
+
+Your reservation will be confirmed once the booking requirements have been completed.
+
+Thank you for choosing UPS B&B Services. 🏡
+
+*Your Comfort, Our Priority.*`;
+
+
+    // =========================
+    // CUSTOMER WHATSAPP NUMBER
+    // =========================
+
+    let customerNumber =
+        phone.value.replace(/\D/g, "");
+
+
+    // Convert Kenyan 07XXXXXXXX / 01XXXXXXXX
+    // to 254XXXXXXXXX
+
+    if (customerNumber.startsWith("0")) {
+
+        customerNumber =
+            "254" +
+            customerNumber.substring(1);
+
+    }
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        customerNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+}
+
+
+// ==================================================
+// SEND "ROOM NOT AVAILABLE" MESSAGE
+// ==================================================
+
+function sendUnavailableConfirmation() {
+
+    const fullName =
+        document.getElementById("fullname");
+
+    const phone =
+        document.getElementById("phone");
+
+    const roomType =
+        document.getElementById("roomType");
+
+    const checkIn =
+        document.getElementById("checkin");
+
+    const checkOut =
+        document.getElementById("checkout");
+
+
+    if (
+        !fullName.value ||
+        !phone.value ||
+        !roomType.value ||
+        !checkIn.value ||
+        !checkOut.value
+    ) {
+
+        alert(
+            "Please make sure the customer's booking information is filled in."
+        );
+
+        return;
+    }
+
+
+    const roomName =
+        roomType.options[
+            roomType.selectedIndex
+        ].value;
+
+
+    const message =
+`🏠 *UPS B&B SERVICES*
+
+Hello ${fullName.value},
+
+Thank you for your booking request.
+
+Unfortunately, the requested room is *NOT AVAILABLE* for your selected dates.
+
+🏠 Room: ${roomName}
+📅 Check-in: ${checkIn.value}
+📅 Check-out: ${checkOut.value}
+
+We would be happy to help you find another available room or alternative dates.
+
+Please contact us so we can assist you.
+📞0117063669
+📧gichuhimwathijohn2007@gmail.com
+
+Thank you for considering UPS B&B Services. 🏡
+
+*Your Comfort, Our Priority.*`;
+
+
+    // Get customer's phone number
+
+    let customerNumber =
+        phone.value.replace(/\D/g, "");
+
+
+    // Convert Kenyan number
+
+    if (customerNumber.startsWith("0")) {
+
+        customerNumber =
+            "254" +
+            customerNumber.substring(1);
+
+    }
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        customerNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+}
+
+</script>
+
+
+</body>
+
+</html>
+```
